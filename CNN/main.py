@@ -4,15 +4,22 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 from datapreprocessor import DataPreProcessor
+from classifier1 import Classifier1
 
 if __name__ == '__main__':
     options = {
         'DATA_DIR': 'H:\\code\\ML_Research_internship\\DataSets\\Dogs_Vs_Cats\\train\\',
         'IMG_SIZE': 50,
         'DATA_SAVE_PATH': 'H:\\code\\ML_Research_internship\\DataSets\\Dogs_Vs_Cats\\train_data.npy',
-        'DESCRIPTION': 'Preprocessing training data'
+        'DESCRIPTION': 'Preprocessing training data',
+        'CATEGORIES': ["dog", "cat"]
     }
+
     datapreprocessor = DataPreProcessor(options)
-    datapreprocessor.start()
+    classifier = Classifier1()
+    #datapreprocessor.start()
+
+    classifier.start()
+
 
 
